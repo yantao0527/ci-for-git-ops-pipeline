@@ -5,7 +5,7 @@ variable "profile" {
 
 variable "region" {
   description = "aws region to deploy to"
-  default = "eu-west-1"
+  default = "us-east-2"
   type        = string
 }
 
@@ -31,6 +31,6 @@ variable "docker_secret_name" {
 
 variable "branch_name" {
   description = "The repository source branch for the pipeline"
-  default = "develop"
+  default = "master"
   type = string
 }

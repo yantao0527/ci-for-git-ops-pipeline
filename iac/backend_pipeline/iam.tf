@@ -49,7 +49,7 @@ data aws_iam_policy_document codepipeline_backend {
       "codebuild:BatchGetBuilds"
     ]
 
-    resources = ["arn:aws:codebuild:eu-west-1:*"]
+    resources = ["arn:aws:codebuild:us-east-2:*"]
   }
 }
 
@@ -100,7 +100,7 @@ data aws_iam_policy_document codebuild_backend {
       "ec2:CreateNetworkInterfacePermission"
     ]
 
-    resources = ["arn:aws:logs:eu-west-1:*","arn:aws:ec2:eu-west-1:*"]
+    resources = ["arn:aws:logs:us-east-2:*","arn:aws:ec2:us-east-2:*"]
   }
 
   statement {
@@ -132,7 +132,7 @@ data aws_iam_policy_document codebuild_backend {
     ]
 
     resources = [
-      "arn:aws:codebuild:eu-west-1:*"
+      "arn:aws:codebuild:us-east-2:*"
     ]
   }
 }

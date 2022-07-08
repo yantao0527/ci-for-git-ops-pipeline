@@ -12,9 +12,9 @@ terraform {
   }
 
   backend "s3" {
-    bucket = "euw1-lfm-gitops-pipeline-terraform-state"
-    key = "euw1-lfm-gitops/terraform.tfstate"
-    region = "eu-west-1"
-    encrypt = true
+    bucket = "usyt-lfm-gitops-pipeline-terraform-state"
+    key = "usyt-lfm-gitops/terraform.tfstate"
+    region = "us-east-2"
+#    encrypt = true
   }
 }

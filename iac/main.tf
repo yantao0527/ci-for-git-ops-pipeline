@@ -22,8 +22,8 @@ module "backend_pipeline" {
   application_name = var.application_name
   pipeline_bucket_name = "${var.application_name}-codepipeline"
   codebuild_bucket_name = "${var.application_name}-codebuild"
-  github_org = "LukeMwila"
-  repository_name = "fleet-git-ops-pipeline"
+  github_org = "yantao0527"
+  repository_name = "ci-for-git-ops-pipeline"
   branch_name = var.branch_name
   environment     = var.environment
   github_token = jsondecode(data.aws_secretsmanager_secret_version.github_token.secret_string)["GitHubPersonalAccessToken"]
