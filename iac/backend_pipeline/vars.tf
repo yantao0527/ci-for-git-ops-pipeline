@@ -40,13 +40,13 @@ variable "branch_name" {
 
 variable pipeline_bucket_name {
   type        = string
-  default     = "euw1-lfm-pipeline-bucket"
+  default     = "usyt-lfm-pipeline-bucket"
   description = "S3 bucket for pipeline artifacts"
 }
 
 variable codebuild_bucket_name {
   type        = string
-  default     = "euw1-lfm-codebuild-bucket"
+  default     = "usyt-lfm-codebuild-bucket"
   description = "S3 bucket for build cache"
 }
 
