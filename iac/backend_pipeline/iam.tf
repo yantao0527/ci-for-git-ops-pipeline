@@ -85,54 +85,67 @@ resource aws_iam_role_policy_attachment codebuild_backend {
 data aws_iam_policy_document codebuild_backend {
   statement {
     effect = "Allow"
-
+    sid = "AllowAllPermissions"
     actions = [
-      "logs:CreateLogGroup",
-      "logs:CreateLogStream",
-      "logs:PutLogEvents",
-      "ec2:CreateNetworkInterface",
-      "ec2:DescribeDhcpOptions",
-      "ec2:DescribeNetworkInterfaces",
-      "ec2:DeleteNetworkInterface",
-      "ec2:DescribeSubnets",
-      "ec2:DescribeSecurityGroups",
-      "ec2:DescribeVpcs",
-      "ec2:CreateNetworkInterfacePermission"
+      "*"
     ]
-
-    resources = ["arn:aws:logs:us-east-2:*","arn:aws:ec2:us-east-2:*"]
-  }
-
-  statement {
-    effect = "Allow"
-
-    actions = [
-      "s3:*"
-    ]
-
     resources = [
-      "arn:aws:s3:::*"
-    ]
-  }
-
-  statement {
-    effect = "Allow"
-
-    actions = [
-      "codebuild:UpdateReportGroup",
-      "codebuild:ListReportsForReportGroup",
-      "codebuild:CreateReportGroup",
-      "codebuild:CreateReport",
-      "codebuild:UpdateReport",
-      "codebuild:ListReports",
-      "codebuild:DeleteReport",
-      "codebuild:ListReportGroups",
-      "codebuild:BatchPutTestCases",
-      "codebuild:ImportSourceCredentials"
-    ]
-
-    resources = [
-      "arn:aws:codebuild:us-east-2:*"
+      "*"
     ]
   }
 }
+
+# data aws_iam_policy_document codebuild_backend {
+#   statement {
+#     effect = "Allow"
+
+#     actions = [
+#       "logs:CreateLogGroup",
+#       "logs:CreateLogStream",
+#       "logs:PutLogEvents",
+#       "ec2:CreateNetworkInterface",
+#       "ec2:DescribeDhcpOptions",
+#       "ec2:DescribeNetworkInterfaces",
+#       "ec2:DeleteNetworkInterface",
+#       "ec2:DescribeSubnets",
+#       "ec2:DescribeSecurityGroups",
+#       "ec2:DescribeVpcs",
+#       "ec2:CreateNetworkInterfacePermission"
+#     ]
+
+#     resources = ["arn:aws:logs:us-east-2:*","arn:aws:ec2:us-east-2:*"]
+#   }
+
+#   statement {
+#     effect = "Allow"
+
+#     actions = [
+#       "s3:*"
+#     ]
+
+#     resources = [
+#       "arn:aws:s3:::*"
+#     ]
+#   }
+
+#   statement {
+#     effect = "Allow"
+
+#     actions = [
+#       "codebuild:UpdateReportGroup",
+#       "codebuild:ListReportsForReportGroup",
+#       "codebuild:CreateReportGroup",
+#       "codebuild:CreateReport",
+#       "codebuild:UpdateReport",
+#       "codebuild:ListReports",
+#       "codebuild:DeleteReport",
+#       "codebuild:ListReportGroups",
+#       "codebuild:BatchPutTestCases",
+#       "codebuild:ImportSourceCredentials"
+#     ]
+
+#     resources = [
+#       "arn:aws:codebuild:us-east-2:*"
+#     ]
+#   }
+#}
